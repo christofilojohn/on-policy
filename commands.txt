@@ -1,0 +1,6 @@
+(.venv) christofilojohn@Ioanniss-MacBook-Pro on-policy % python train_hanabi_forward.py --env_name "Hanabi" --algorithm_name "mappo" \
+--experiment_name "test_hanabi" --hanabi_name "Hanabi-Very-Small" \
+--num_agents 2 --seed 1 --n_training_threads 1 --n_rollout_threads 1 \
+--num_mini_batch 1 --episode_length 100 --num_env_steps 60000 \
+--ppo_epoch 15 --gain 0.01 --lr 7e-4 --critic_lr 7e-4 \
+--hidden_size 64 --layer_N 1 --use_eval False --use_wandb False
