@@ -172,9 +172,10 @@ def main(args):
     if all_args.use_wandb:
         run.finish()
     else:
-        runner.writter.export_scalars_to_json(str(runner.log_dir + '/summary.json'))
+        # FIX: export_scalars_to_json crashes with new NumPy.
+        # We comment it out because the main logs are already saved in the events file.
+        # runner.writter.export_scalars_to_json(str(runner.log_dir + '/summary.json'))
         runner.writter.close()
 
 
 if __name__ == "__main__":
-    main(sys.argv[1:])
